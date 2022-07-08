@@ -12,6 +12,17 @@ $CucciaCane = new Cucce("Cuccia Lunetta", "LovDogs", 20, 1, "Cani", "green");
 $Biscotti = new Food("BiscDog", "CaniAffamati", 3, 2, "Cani", 300, "2022-11-01" );
 $Pallina = new Game("Pallina Salterina", "SaltaSalta", 5, 1, "Cani", "black");
 $crocchette = new Food("Crocchette Dietetiche", "GattiMagri", 15, 1, "Gatti", 3000, "2023-01-01");
+
+//utente loggato
+$Nathan = new User("Nathan", "Bianchi", "Viale Dante 12, Firenze" , "nathan@gmail.com", true);
+
+//utente non loggato
+$Noah = new User("Noah", "Rossi", "Via Fiume 154, Milano" , "noah@yahoo.com", false);
+
+$cardNathan = new CreditCard(3242525436, "2022/11/16", false, $Nathan);
+ $carrelloNathan = new Carrello(0, $Nathan, [$CucciaCane->price, $Biscotti->price, $Pallina->price, $crocchette->price], 0 );
+// var_dump($carrelloNathan->Discount($total));
+
 ?>
 
 <!DOCTYPE html>
@@ -25,11 +36,22 @@ $crocchette = new Food("Crocchette Dietetiche", "GattiMagri", 15, 1, "Gatti", 30
 <body>
     <div>
         <h1>Il tuo carrello:</h1>
-        <?= $CucciaCane->printProdotto() ?>
-        <?= $Biscotti->printProdotto() ?>
-        <?= $Pallina->printProdotto() ?>
-        <?= $crocchette->printProdotto() ?>
+        <section id="prodotti">
+            <div>
+                <?= $CucciaCane->printProdotto() ?>
+            </div>
+            <div>
+                <?= $Biscotti->printProdotto() ?>
+            </div>
+            <div>
+                <?= $Pallina->printProdotto() ?>
+            </div>
+            <div>
+             <?= $crocchette->printProdotto() ?>
+            </div>
+        </section>
 
+        <?= $carrelloNathan->Total() ?>
     </div>
     
 </body>

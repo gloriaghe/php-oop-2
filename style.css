@@ -1,0 +1,4 @@
+#prodotti{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -19,7 +19,8 @@ class Product
     }
 
     public function printProdotto() {
-		echo "<h2>{$this->name}</h2>
+		echo "<div>
+        <h2>{$this->name}</h2>
 					<ul>
 						<li>Marchio: {$this->brand}</li>
 						<li>Prezzo: {$this->price} euro</li>

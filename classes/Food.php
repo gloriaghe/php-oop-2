@@ -19,6 +19,7 @@ class Food extends Product
         return "
 						<li>Peso: {$this->weight} grammi</li>
 						<li>Data di scadenza: {$this->foodExpiration} grammi</li>
-					</ul>";
+					</ul>
+                    <div>";
     }
 }

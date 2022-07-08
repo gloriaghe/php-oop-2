@@ -17,7 +17,8 @@ class Cucce extends Product
         parent::printProdotto();
 		return "	
 						<li>Colore: {$this->color}</li>
-					</ul>";
+					</ul>
+                    <div>";
 	}
 
     

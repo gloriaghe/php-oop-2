@@ -3,26 +3,37 @@
 
 class Carrello
 {
+    public $total = 0;
     public User $user;
-    protected $total;
-    protected $totalDiscount;
-    
-    
+    // public $totalDiscount = 0;
+    public $product = [];
+    public $totalprice = 0;
 
-    protected function __construct(float $total, User $user, float $totalDiscount)
-    {
-       $this->total = $total;
-       $this->user = $user;
-       $this->$totalDiscount = $totalDiscount;
-        $this->Discount($total);
-    }
 
-    public function Discount($total)
+    public function __construct(float $total, User $user, array $product, float $totalprice)
     {
-     if($user->login == true){
-        return $this->totalDiscount = ($total / 100) * 80;
-     } 
+        $this->total = $total;
+        $this->user = $user;
+        $this->totalprice = $totalprice;
+        $this->product = $product;
+        $this->Total($product, $total);
+        // $this->Discount($total);
+
     }
 
     
+    public function Total($product, $total)
+    {
+        $total = array_sum($product);
+
+        if ($this->user->login == true) {
+            return $totalprice  = ($total / 100) * 80;
+        } else {
+            return $totalprice;
+        }
+
+    }
+    
+    
+
 }
