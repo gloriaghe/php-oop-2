@@ -51,7 +51,7 @@ $cardNathan = new CreditCard(3242525436, "2022/11/16", false, $Nathan);
             </div>
         </section>
 
-        <?= $carrelloNathan->Total() ?>
+        <?= $carrelloNathan->Total($carrelloNathan->product, $carrelloNathan->total) ?>
     </div>
     
 </body>
