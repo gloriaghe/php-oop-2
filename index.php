@@ -19,9 +19,8 @@ $Nathan = new User("Nathan", "Bianchi", "Viale Dante 12, Firenze" , "nathan@gmai
 //utente non loggato
 $Noah = new User("Noah", "Rossi", "Via Fiume 154, Milano" , "noah@yahoo.com", false);
 
-$cardNathan = new CreditCard(3242525436, "2022/11/16", false, $Nathan);
- $carrelloNathan = new Carrello(0, $Nathan, [$CucciaCane->price, $Biscotti->price, $Pallina->price, $crocchette->price], 0 );
-// var_dump($carrelloNathan->Discount($total));
+$cardNathan = new CreditCard(3242525436, "2021/11/16", $Nathan, "", "", "");
+$carrelloNathan = new Carrello(0, $Nathan, [$CucciaCane->price, $Biscotti->price, $Pallina->price, $crocchette->price], 0, "" );
 
 ?>
 
@@ -52,6 +51,8 @@ $cardNathan = new CreditCard(3242525436, "2022/11/16", false, $Nathan);
         </section>
 
         <?= $carrelloNathan->Total($carrelloNathan->product, $carrelloNathan->total) ?>
+        <?= $cardNathan->date($cardNathan->expirationDate, $cardNathan->today_stamp, $cardNathan->event_date_stamp) ?>
+
     </div>
     
 </body>
