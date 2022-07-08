@@ -1,7 +1,12 @@
 <?php
-include __DIR__ . 'class/Product.php';
-include __DIR__ . 'class/User.php';
-include __DIR__ . 'class/Carrello.php';
+include __DIR__ . '/classes/Product.php';
+include __DIR__ . '/classes/User.php';
+include __DIR__ . '/classes/Carrello.php';
+include __DIR__ . '/classes/CreditCard.php';
+include __DIR__ . '/classes/Cucce.php';
+include __DIR__ . '/classes/Game.php';
+include __DIR__ . '/classes/Food.php';
+
 
 ?>
 

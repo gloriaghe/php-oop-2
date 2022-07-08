@@ -12,10 +12,5 @@ class Food extends Product
 
     }
 
-    protected function ()
-    {
-     
-    }
-
     
 }

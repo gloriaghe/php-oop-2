@@ -1,8 +1,4 @@
 <?php
-include __DIR__ . '/Cucce.php';
-include __DIR__ . '/Game.php';
-include __DIR__ . '/Food.php';
-
 
 class User
 {
@@ -11,6 +7,7 @@ class User
     public $address;
     public $email;
     public $login = false;
+    
     
 
     public function __construct(string $name, string $surname, string $address, string $email, bool $login)
@@ -23,10 +20,6 @@ class User
 
     }
 
-    public function ()
-    {
-     
-    }
-
+    
     
 }

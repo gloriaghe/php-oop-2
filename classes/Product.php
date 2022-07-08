@@ -1,9 +1,11 @@
 <?php
 
-class Game extends Product
+class Product
 {
-    protected $color;
-    
+    protected $name;
+    protected $price = 0;
+    protected $numberProduct = 0;
+    protected $tipeAnimal;
 
     protected function __construct(string $name, float $price, int $numberProduct, string $tipeAnimal)
     {
@@ -13,10 +15,7 @@ class Game extends Product
 
     }
 
-    protected function ()
-    {
-     
-    }
+   
 
     
 }

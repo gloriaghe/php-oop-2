@@ -1,7 +1,4 @@
 <?php
-include __DIR__ . '/Cucce.php';
-include __DIR__ . '/Game.php';
-include __DIR__ . '/Food.php';
 
 
 class Carrello
@@ -23,8 +20,8 @@ class Carrello
     public function Discount($total)
     {
      if($user->login == true){
-        $this->totalDiscount = ($total / 100) * 80;
-     }
+        return $this->totalDiscount = ($total / 100) * 80;
+     } 
     }
 
     
