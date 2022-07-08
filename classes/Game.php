@@ -2,16 +2,24 @@
 
 class Game extends Product
 {
-    protected $color;
-    
+    public $color;
 
-    protected function __construct(string $name, float $price, int $numberProduct, string $tipeAnimal, string $color)
+
+    public function __construct(string $name, string $brand, float $price, int $numberProduct, string $tipeAnimal, string $color)
     {
-       $this->color = $color;
+        parent::__construct($name, $brand, $price, $numberProduct, $tipeAnimal);
+        $this->color = $color;
 
     }
 
-    
+    public function printProdotto()
+    {
+        parent::printProdotto();
+        return "	
+						<li>Colore: {$this->color}</li>
+					</ul>";
+    }
 
-    
+
+
 }

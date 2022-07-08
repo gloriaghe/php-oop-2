@@ -2,15 +2,23 @@
 
 class Food extends Product
 {
-    protected $weight = 0;
-    protected $foodExpiration;
+    public $weight = 0;
+    public $foodExpiration;
 
-    protected function __construct(string $name, float $price, int $numberProduct, string $tipeAnimal, int $weight, string $foodExpiration)
+    public function __construct(string $name, string $brand, float $price, int $numberProduct, string $tipeAnimal, int $weight, string $foodExpiration)
     {
-       $this->weight = $weight;
-       $this->foodExpiration = $foodExpiration;
+        parent::__construct($name, $brand, $price, $numberProduct, $tipeAnimal);
+        $this->weight = $weight;
+        $this->foodExpiration = $foodExpiration;
 
     }
 
-    
+    public function printProdotto()
+    {
+        parent::printProdotto();
+        return "
+						<li>Peso: {$this->weight} grammi</li>
+						<li>Data di scadenza: {$this->foodExpiration} grammi</li>
+					</ul>";
+    }
 }
