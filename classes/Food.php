@@ -2,8 +2,8 @@
 
 class Food extends Product
 {
-    public $weight = 0;
-    public $foodExpiration;
+    protected $weight = 0;
+    protected $foodExpiration;
 
     public function __construct(string $name, string $brand, float $price, int $numberProduct, string $tipeAnimal, int $weight, string $foodExpiration)
     {
@@ -18,7 +18,7 @@ class Food extends Product
         parent::printProdotto();
         return "
 						<li>Peso: {$this->weight} grammi</li>
-						<li>Data di scadenza: {$this->foodExpiration} grammi</li>
+						<li>Data di scadenza: {$this->foodExpiration}</li>
 					</ul>
                     <div>";
     }

@@ -6,13 +6,15 @@ include __DIR__ . '/classes/CreditCard.php';
 include __DIR__ . '/classes/Cucce.php';
 include __DIR__ . '/classes/Game.php';
 include __DIR__ . '/classes/Food.php';
+include __DIR__ . '/classes/Antipulci.php';
+
 
 //prodotti
 $CucciaCane = new Cucce("Cuccia Lunetta", "LovDogs", 20, 1, "Cani", "green");
 $Biscotti = new Food("BiscDog", "CaniAffamati", 3, 2, "Cani", 300, "2022-11-01" );
 $Pallina = new Game("Pallina Salterina", "SaltaSalta", 5, 1, "Cani", "black");
 $crocchette = new Food("Crocchette Dietetiche", "GattiMagri", 15, 1, "Gatti", 3000, "2023-01-01");
-
+$antipulci = new Antipulci("Frontline", "Pulci&Soci", 25.30, 1, "Cani", "" );
 //utente loggato
 $Nathan = new User("Nathan", "Bianchi", "Viale Dante 12, Firenze" , "nathan@gmail.com", true);
 
@@ -48,6 +50,10 @@ $carrelloNathan = new Carrello(0, $Nathan, [$CucciaCane->price, $Biscotti->price
             <div>
              <?= $crocchette->printProdotto() ?>
             </div>
+            <div>
+             <?= $antipulci->printProdotto() ?>
+            </div>
+
         </section>
 
         <?= $carrelloNathan->Total($carrelloNathan->product, $carrelloNathan->total) ?>

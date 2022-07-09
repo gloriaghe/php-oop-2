@@ -2,13 +2,13 @@
 
 class Product
 {
-    public $name;
-    public $brand;
+    protected $name;
+    protected $brand;
     public $price = 0;
     public $numberProduct = 0;
-    public $tipeAnimal;
+    protected $tipeAnimal;
 
-    public function __construct(string $name, string $brand, float $price, int $numberProduct, string $tipeAnimal)
+    protected function __construct(string $name, string $brand, float $price, int $numberProduct, string $tipeAnimal)
     {
        $this->name = $name;
        $this->brand = $brand;
@@ -18,7 +18,7 @@ class Product
 
     }
 
-    public function printProdotto() {
+    protected function printProdotto() {
 		echo "<div>
         <h2>{$this->name}</h2>
 					<ul>
