@@ -34,9 +34,9 @@ class CreditCard
         $today_stamp = strtotime($todays_date);
         $event_date_stamp = strtotime($expirationDate); 
         if ($today_stamp > $event_date_stamp) {
-            return "<h1>La carta di credito è scaduta. Immettere i dati di una nuova carta per procedere con il pagamento.</h1>";
+            return "<h2>La carta di credito è scaduta. Immettere i dati di una nuova carta per procedere con il pagamento.</h2>";
         } else {
-            return "La carta è valida";
+            return "<h2>La carta è valida</h2>";
         }
     }
 

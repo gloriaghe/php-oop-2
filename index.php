@@ -15,6 +15,8 @@ $Biscotti = new Food("BiscDog", "CaniAffamati", 3, 2, "Cani", 300, "2022-11-01" 
 $Pallina = new Game("Pallina Salterina", "SaltaSalta", 5, 1, "Cani", "black");
 $crocchette = new Food("Crocchette Dietetiche", "GattiMagri", 15, 1, "Gatti", 3000, "2023-01-01");
 $antipulci = new Antipulci("Frontline", "Pulci&Soci", 25.30, 1, "Cani", "" );
+
+
 //utente loggato
 $Nathan = new User("Nathan", "Bianchi", "Viale Dante 12, Firenze" , "nathan@gmail.com", true);
 
@@ -37,6 +39,7 @@ $carrelloNathan = new Carrello(0, $Nathan, [$CucciaCane->price, $Biscotti->price
 <body>
     <div>
         <h1>Il tuo carrello:</h1>
+       
         <section id="prodotti">
             <div>
                 <?= $CucciaCane->printProdotto() ?>
@@ -54,9 +57,10 @@ $carrelloNathan = new Carrello(0, $Nathan, [$CucciaCane->price, $Biscotti->price
              <?= $antipulci->printProdotto() ?>
             </div>
 
-        </section>
-
+        </section> 
+        <h1>Pagamento:</h1>
         <?= $carrelloNathan->Total($carrelloNathan->product, $carrelloNathan->total) ?>
+        <h1>Validità carta:</h1>
         <?= $cardNathan->date($cardNathan->expirationDate, $cardNathan->today_stamp, $cardNathan->event_date_stamp) ?>
 
     </div>

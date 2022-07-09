@@ -2,7 +2,7 @@
 
 class Cucce extends Product
 {
-    protected $color;
+    public $color;
     
 
     public function __construct(string $name, string $brand, float $price, int $numberProduct, string $tipeAnimal, string $color)
